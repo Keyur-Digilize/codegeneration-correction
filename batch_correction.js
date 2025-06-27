@@ -430,7 +430,7 @@ const updateRecordInCodeSummary = async (data, tx = prisma) => {
                   tx
                 );
                 console.log("Done ", tableName);
-                });
+                }, { timeout: 1200000 });
               }
             }
           } else {
@@ -474,7 +474,7 @@ const updateRecordInCodeSummary = async (data, tx = prisma) => {
               );
             }
           }
-        });
+        }, { timeout: 1200000 });
       }
 
       // const codegenHistory = await prisma.$queryRawUnsafe(`
